@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link href="css/style.css">
+    <style>
+
+        .mainselection {
+            overflow: hidden;
+            width: 350px;
+            -moz-border-radius: 9px 9px 9px 9px;
+            -webkit-border-radius: 9px 9px 9px 9px;
+            border-radius: 9px 9px 9px 9px;
+            box-shadow: 1px 1px 11px #330033;
+            background: url("http://www.danielneumann.com/wp-content/uploads/2011/01/arrow.gif") no-repeat scroll 319px 5px #58B14C;
+        }
+        #rcorners3 {
+            border-radius: 25px;
+            border: 2px solid #73AD21;
+            padding: 20px;
+            width: 651px;
+            height: 700px;
+        }
+        .seventeen {
+            font: sans-serif;
+            font-size: 200px;
+            text-align: center;
+            fill: rgb(0, 0, 0);
+            letter-spacing: 30px;
+            opacity: 0.50;
+        }
+        #rcorners2 {
+            border-radius: 25px;
+            background: rgb(204, 204, 255);
+            border: 2px solid;
+            padding: 25px;
+        }
+
+
+        .small {
+            font: 7.5px sans-serif;
+        }
+        
+        .heavy {
+            font: bold 30px sans-serif;
+        }
+
+        /* Note that the color of the text is set with the    *
+        * fill property, the color property is for HTML only */
+        .Rrrrr {
+            font: bold 60px serif;
+            fill: white;
+        }
+
+        // background-color: #3498DB;
+    </style>
+</head>
+
+<body>
+    <div class="jumbotron text-center">
+        <h1>Hans Rosling Visulization</h1>
+        <p>Assignment 2 by Venkat Vivek Yellanti </p>
+    </div>
+    <div class="container">
+  <div class="row">
+      <div class="col-sm-4" id="rcorners2">
+          <br /><br /><br /><br /><br /><br /><br /><br />
+          <h3>Control Panel</h3><br />
+
+              <select id="Cont" onchange="cc()">
+                  <option value="All" selected>Select All Continents</option>
+                  <option value="africa">Africa</option>
+                  <option value="asia">Asia</option>
+                  <option value="americas">Americas</option>
+                  <option value="europe">Europe</option>
+
+          </select><br /><br />
+          <p>Number of Points</p><br /><input min=0 max=214 value=0 type="range" id="slider">
+
+          <br /><br />
+          <button onclick="play()" id="animate" value="Play" class="btn btn-info">Auto Play</button>
+      </div>
+    <div  class="col-sm-8" id="rcorners3">
+        <svg id="svg_chart">
+            <rect x="560" y="550" width="10" height="10" fill="#decbe4" style="opacity: 0.7"></rect>
+            <rect x="560" y="530" width="10" height="10" fill="#ccebc5" style="opacity: 0.7"></rect>
+            <rect x="560" y="510" width="10" height="10" fill="#b3cde3" style="opacity: 0.7"></rect>
+            <rect x="560" y="490" width="10" height="10" fill="#fbb4ae" style="opacity: 0.7"></rect>
+            <text x="580" y="500">Africa</text>
+            <text x="580" y="520">Americas</text>
+            <text x="580" y="540">Asia</text>
+            <text x="580" y="560">Europe</text>
+
+            <text id="year_s" x="55" y="400" class="seventeen"></text>
+        </svg>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+    <script src="https://d3js.org/d3.v5.js"></script>
+    <script src="js/main.js"></script>
+    
+
+</body>
+
+</html>
